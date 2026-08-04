@@ -166,7 +166,7 @@ def pytest_sessionstart(session):
         env_file = results_dir / "environment.properties"
         with open(env_file, "w") as f:
             f.write(f"Base_URL={base_url}\n")
-            f.write("Browsers=chromium,firefox\n")
+            f.write("Browsers=chromium, firefox\n")
             f.write("Framework=Playwright + pytest (no BDD)\n")
     except Exception as e:
         logging.warning(f"Could not write Allure environment.properties: {e}")
