@@ -1,5 +1,10 @@
 # SauceDemo E-Commerce Automation — Playwright + Pytest
 
+[![CI/CD Pipeline](https://github.com/ruby-leo/p3-saucedemo-playwright-pytest-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/ruby-leo/p3-saucedemo-playwright-pytest-automation/actions/workflows/ci.yml)
+[![Allure Report](https://img.shields.io/badge/Allure-Report-orange?logo=testcafe)](https://ruby-leo.github.io/p3-saucedemo-playwright-pytest-automation/)
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/)
+[![Playwright](https://img.shields.io/badge/Playwright-Python-2EAD33?logo=playwright)](https://playwright.dev/python/)
+
 A test automation suite for [SauceDemo](https://www.saucedemo.com/), built on **Playwright + plain pytest** covering login, product browsing, cart management, checkout, sorting, and app-state reset.
 
 ---
