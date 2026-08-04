@@ -165,9 +165,9 @@ def pytest_sessionstart(session):
         base_url = session.config.getini("base_url")
         env_file = results_dir / "environment.properties"
         with open(env_file, "w") as f:
-            f.write(f"Application Under Test= Sauce Demo Web App\n")
-            f.write("Browsers=chromium, firefox\n")
-            f.write("Framework=Playwright + pytest (no BDD)\n")
+            f.write(f"base_url={base_url}\n")
+            f.write("browsers=chromium, firefox\n")
+            f.write("framework=Playwright + pytest (no BDD)\n")
     except Exception as e:
         logging.warning(f"Could not write Allure environment.properties: {e}")
 
