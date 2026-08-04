@@ -58,7 +58,7 @@ jobs:
 
       - name: Generate Allure report
         run: |
-          npm install allure
+          npm install allure-commandline
           npx allure generate ./allure-results -o ./allure-report --clean
 
       - name: Publish report to GitHub Pages
