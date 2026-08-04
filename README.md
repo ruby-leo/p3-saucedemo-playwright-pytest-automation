@@ -150,7 +150,7 @@ If the site itself is down, the whole suite fails in milliseconds with one clear
 
 ### CI/CD pipeline
 
-`.github/workflows/ci.yml` runs on every push:
+This project uses **[GitHub Actions](https://github.com/features/actions)** for CI/CD, configured in `.github/workflows/ci.yml`. It runs automatically on every push:
 
 1. Install dependencies (Python packages, Playwright browsers, Node.js for the Allure CLI)
 2. Run the full suite (failures don't block the pipeline — reporting always completes)
@@ -158,6 +158,37 @@ If the site itself is down, the whole suite fails in milliseconds with one clear
 4. Generate the Allure report
 5. Publish it to the `gh-pages` branch via the built-in `GITHUB_TOKEN` — no manual SSH deploy key setup required, unlike a self-hosted CI server
 6. Explicitly fail the workflow at the end if tests failed, so GitHub still shows a red ✗ even though reporting succeeded
+
+📋 **[View all pipeline runs and build summaries →](https://github.com/ruby-leo/p3-saucedemo-playwright-pytest-automation/actions)**
+
+---
+
+## Allure Reporting
+
+Every test run — locally or in CI — produces a full **Allure Report**, giving each test its own detailed entry with pass/fail status, execution time, browser tag, and a complete visual trail of what happened.
+
+### Screenshots & videos, per test
+
+Thanks to `pytest.ini`'s `--screenshot=on --video=on` flags, Playwright captures a screenshot and a video for **every single test**, not just failures. `conftest.py`'s `pytest_runtest_teardown` hook then locates each test's output folder and attaches those files directly onto that test's Allure entry:
+
+- **Screenshots** — a final-state `.png` for every test, so you can visually confirm what the page looked like at the end of the run without re-running anything.
+- **Videos** — a full `.webm` recording of the entire test, useful for watching exactly what Playwright did step-by-step, especially handy for diagnosing flaky or timing-related failures (like the sort/reset tests hitting a Firefox-only race).
+- **Traces** — retained only `on-failure` (`--tracing=retain-on-failure`) rather than for every test, since traces are heavier; each is a `.zip` containing DOM snapshots, network activity, and console logs, downloadable straight from the Allure entry and viewable via `npx playwright show-trace <file>` or at [trace.playwright.dev](https://trace.playwright.dev/).
+
+The `test_checkout.py` order-confirmation test goes one step further and manually attaches an extra mid-flow screenshot (the order summary, right before finalizing) via `allure.attach()`, on top of the automatic end-of-test capture.
+
+### Browser tagging
+
+A `_tag_browser_in_allure` fixture tags every result with its browser (`chromium` / `firefox`), so the report's **Tags** filter lets you isolate results per browser instead of digging through a flat list.
+
+### Trend history across runs
+
+In CI, the pipeline pulls the previous report's `history/` folder from `gh-pages` before generating a new one, so the published report shows trend graphs (pass/fail rate, duration) across runs over time — not just a snapshot of the latest run.
+
+### Viewing the report
+
+- **Locally:** `allure serve allure-results` (see [Getting Started](#getting-started))
+- **From CI:** published automatically to GitHub Pages after every run — see the [CI/CD pipeline](#cicd-pipeline) section above for the link
 
 ---
 
