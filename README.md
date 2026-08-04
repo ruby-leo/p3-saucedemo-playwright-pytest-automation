@@ -159,7 +159,7 @@ This project uses **[GitHub Actions](https://github.com/features/actions)** for 
 5. Publish it to the `gh-pages` branch via the built-in `GITHUB_TOKEN` — no manual SSH deploy key setup required, unlike a self-hosted CI server
 6. Explicitly fail the workflow at the end if tests failed, so GitHub still shows a red ✗ even though reporting succeeded
 
-📋 **[View all pipeline runs and build summaries →](https://github.com/ruby-leo/p3-saucedemo-playwright-pytest-automation/actions)**
+📋 **[View all pipeline runs and build summaries here →](https://github.com/ruby-leo/p3-saucedemo-playwright-pytest-automation/actions)**
 
 ---
 
@@ -188,7 +188,7 @@ In CI, the pipeline pulls the previous report's `history/` folder from `gh-pages
 ### Viewing the report
 
 - **Locally:** `allure serve allure-results` (see [Getting Started](#getting-started))
-- **From CI:** published automatically to GitHub Pages after every run — see the [CI/CD pipeline](#cicd-pipeline) section above for the link
+- **From CI:** published automatically to GitHub Pages after every run — [![Allure Report](https://img.shields.io/badge/Allure-Report-orange?logo=testcafe)](https://ruby-leo.github.io/p3-saucedemo-playwright-pytest-automation/)
 
 ---
 
@@ -202,6 +202,8 @@ In CI, the pipeline pulls the previous report's `history/` folder from `gh-pages
 | `test_checkout.py` | TC-8: full checkout flow with a known product set, order summary verification, screenshot capture, and order confirmation. |
 | `test_sorting.py` | TC-9: all four sort options (name/price, ascending/descending). |
 | `test_reset_app_state.py` | TC-10: Reset App State clears the cart back to empty. |
+
+---
 
 ## OOP Principles in This Project
 
