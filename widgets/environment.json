@@ -1,1 +1,1 @@
-[{"values":["Under Test= Sauce Demo Web App"],"name":"Application"},{"values":["chromium, firefox"],"name":"Browsers"},{"values":["Playwright + pytest (no BDD)"],"name":"Framework"}]
+[{"values":["https://www.saucedemo.com"],"name":"base_url"},{"values":["chromium, firefox"],"name":"browsers"},{"values":["Playwright + pytest (no BDD)"],"name":"framework"}]

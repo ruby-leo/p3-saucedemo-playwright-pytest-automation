@@ -1,103 +1,103 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"TC-9: Selects each sort option in turn and asserts the resulting
-    product order - by name or by price, ascending or descending as
-    expected for that option.","111","test_sorting_functionality[chromium-Name (A to Z)-name_asc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
-"TC-9: Selects each sort option in turn and asserts the resulting
-    product order - by name or by price, ascending or descending as
-    expected for that option.","107","test_sorting_functionality[chromium-Price (high to low)-price_desc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
 "TC-1: Logs in with each predefined SauceDemo user and verifies the
     expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","5668","test_login_with_various_predefined_users[firefox-performance_glitch_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+    normal users, or a lockout error for locked_out_user.","943","test_login_with_various_predefined_users[firefox-visual_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
 "TC-1: Logs in with each predefined SauceDemo user and verifies the
     expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","2570","test_login_with_various_predefined_users[chromium-locked_out_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+    normal users, or a lockout error for locked_out_user.","653","test_login_with_various_predefined_users[chromium-visual_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
 "TC-2: Attempts login using each invalid credential combination from
     test_data.json (wrong password, missing username, missing password)
-    and verifies the corresponding error message is shown.","1523","test_login_with_invalid_credentials[firefox-2]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-1: Logs in with each predefined SauceDemo user and verifies the
-    expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","654","test_login_with_various_predefined_users[chromium-standard_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-5, TC-6, TC-7: Randomly selects 4 of the 6 listed products, adds
-    each to the cart, then verifies the cart badge count and the cart
-    page's contents match the selection exactly.","364","test_random_product_selection_add_to_cart_and_verify[chromium]","tests","2026-08-04","passed","2026-08-04","","test_cart_flow","",""
-"TC-1: Logs in with each predefined SauceDemo user and verifies the
-    expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","1200","test_login_with_various_predefined_users[firefox-standard_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-10: Adds products to the cart, triggers Reset App State from the
-    side menu, and verifies the cart badge disappears (count returns to 0).","1347","test_reset_app_state_clears_cart[firefox]","tests","2026-08-04","passed","2026-08-04","","test_reset_app_state","",""
+    and verifies the corresponding error message is shown.","947","test_login_with_invalid_credentials[firefox-0]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
 "TC-2: Attempts login using each invalid credential combination from
     test_data.json (wrong password, missing username, missing password)
-    and verifies the corresponding error message is shown.","990","test_login_with_invalid_credentials[firefox-1]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-2: Attempts login using each invalid credential combination from
-    test_data.json (wrong password, missing username, missing password)
-    and verifies the corresponding error message is shown.","755","test_login_with_invalid_credentials[chromium-2]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+    and verifies the corresponding error message is shown.","6117","test_login_with_invalid_credentials[chromium-2]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
 "TC-4: Verifies the cart icon is visible on the product listing page
-    immediately after login.","47","test_cart_icon_visibility[firefox]","tests","2026-08-04","passed","2026-08-04","","test_logout_and_cart_visibility","",""
+    immediately after login.","33","test_cart_icon_visibility[chromium]","tests","2026-08-04","passed","2026-08-04","","test_logout_and_cart_visibility","",""
 "TC-9: Selects each sort option in turn and asserts the resulting
     product order - by name or by price, ascending or descending as
     expected for that option.","81","test_sorting_functionality[chromium-Price (low to high)-price_asc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
 "TC-9: Selects each sort option in turn and asserts the resulting
     product order - by name or by price, ascending or descending as
-    expected for that option.","190","test_sorting_functionality[firefox-Price (high to low)-price_desc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+    expected for that option.","241","test_sorting_functionality[firefox-Price (high to low)-price_desc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+"TC-10: Adds products to the cart, triggers Reset App State from the
+    side menu, and verifies the cart badge disappears (count returns to 0).","1340","test_reset_app_state_clears_cart[chromium]","tests","2026-08-04","passed","2026-08-04","","test_reset_app_state","",""
 "TC-1: Logs in with each predefined SauceDemo user and verifies the
     expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","1222","test_login_with_various_predefined_users[firefox-locked_out_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+    normal users, or a lockout error for locked_out_user.","747","test_login_with_various_predefined_users[firefox-error_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-9: Selects each sort option in turn and asserts the resulting
+    product order - by name or by price, ascending or descending as
+    expected for that option.","47","test_sorting_functionality[chromium-Price (high to low)-price_desc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+"TC-1: Logs in with each predefined SauceDemo user and verifies the
+    expected outcome - a successful redirect to the Products page for
+    normal users, or a lockout error for locked_out_user.","819","test_login_with_various_predefined_users[firefox-standard_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-8: Adds known products to the cart, proceeds through checkout,
+    captures a screenshot of the order summary (attached to the Allure
+    report), finalizes the order, and verifies the confirmation message.","842","test_complete_checkout_and_validate_order[chromium]","tests","2026-08-04","passed","2026-08-04","","test_checkout","",""
+"TC-10: Adds products to the cart, triggers Reset App State from the
+    side menu, and verifies the cart badge disappears (count returns to 0).","1476","test_reset_app_state_clears_cart[firefox]","tests","2026-08-04","passed","2026-08-04","","test_reset_app_state","",""
+"TC-2: Attempts login using each invalid credential combination from
+    test_data.json (wrong password, missing username, missing password)
+    and verifies the corresponding error message is shown.","734","test_login_with_invalid_credentials[chromium-1]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-2: Attempts login using each invalid credential combination from
+    test_data.json (wrong password, missing username, missing password)
+    and verifies the corresponding error message is shown.","512","test_login_with_invalid_credentials[chromium-0]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-9: Selects each sort option in turn and asserts the resulting
+    product order - by name or by price, ascending or descending as
+    expected for that option.","55","test_sorting_functionality[firefox-Name (A to Z)-name_asc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+"TC-8: Adds known products to the cart, proceeds through checkout,
+    captures a screenshot of the order summary (attached to the Allure
+    report), finalizes the order, and verifies the confirmation message.","1016","test_complete_checkout_and_validate_order[firefox]","tests","2026-08-04","passed","2026-08-04","","test_checkout","",""
 "TC-5, TC-6, TC-7: Randomly selects 4 of the 6 listed products, adds
     each to the cart, then verifies the cart badge count and the cart
-    page's contents match the selection exactly.","763","test_random_product_selection_add_to_cart_and_verify[firefox]","tests","2026-08-04","passed","2026-08-04","","test_cart_flow","",""
-"TC-1: Logs in with each predefined SauceDemo user and verifies the
-    expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","5703","test_login_with_various_predefined_users[chromium-performance_glitch_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-1: Logs in with each predefined SauceDemo user and verifies the
-    expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","626","test_login_with_various_predefined_users[firefox-visual_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-2: Attempts login using each invalid credential combination from
-    test_data.json (wrong password, missing username, missing password)
-    and verifies the corresponding error message is shown.","1010","test_login_with_invalid_credentials[firefox-0]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-1: Logs in with each predefined SauceDemo user and verifies the
-    expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","2500","test_login_with_various_predefined_users[chromium-error_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-2: Attempts login using each invalid credential combination from
-    test_data.json (wrong password, missing username, missing password)
-    and verifies the corresponding error message is shown.","421","test_login_with_invalid_credentials[chromium-0]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-9: Selects each sort option in turn and asserts the resulting
-    product order - by name or by price, ascending or descending as
-    expected for that option.","88","test_sorting_functionality[firefox-Name (A to Z)-name_asc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+    page's contents match the selection exactly.","698","test_random_product_selection_add_to_cart_and_verify[firefox]","tests","2026-08-04","passed","2026-08-04","","test_cart_flow","",""
+"TC-5, TC-6, TC-7: Randomly selects 4 of the 6 listed products, adds
+    each to the cart, then verifies the cart badge count and the cart
+    page's contents match the selection exactly.","429","test_random_product_selection_add_to_cart_and_verify[chromium]","tests","2026-08-04","passed","2026-08-04","","test_cart_flow","",""
 "TC-3: Logs out from an authenticated session and verifies the user
-    is redirected back to the login screen.","1199","test_logout_functionality[chromium]","tests","2026-08-04","passed","2026-08-04","","test_logout_and_cart_visibility","",""
-"TC-8: Adds known products to the cart, proceeds through checkout,
-    captures a screenshot of the order summary (attached to the Allure
-    report), finalizes the order, and verifies the confirmation message.","1113","test_complete_checkout_and_validate_order[chromium]","tests","2026-08-04","passed","2026-08-04","","test_checkout","",""
+    is redirected back to the login screen.","1223","test_logout_functionality[firefox]","tests","2026-08-04","passed","2026-08-04","","test_logout_and_cart_visibility","",""
 "TC-3: Logs out from an authenticated session and verifies the user
-    is redirected back to the login screen.","1191","test_logout_functionality[firefox]","tests","2026-08-04","passed","2026-08-04","","test_logout_and_cart_visibility","",""
+    is redirected back to the login screen.","1070","test_logout_functionality[chromium]","tests","2026-08-04","passed","2026-08-04","","test_logout_and_cart_visibility","",""
 "TC-9: Selects each sort option in turn and asserts the resulting
     product order - by name or by price, ascending or descending as
-    expected for that option.","124","test_sorting_functionality[firefox-Price (low to high)-price_asc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+    expected for that option.","59","test_sorting_functionality[firefox-Price (low to high)-price_asc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
 "TC-1: Logs in with each predefined SauceDemo user and verifies the
     expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","633","test_login_with_various_predefined_users[firefox-error_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+    normal users, or a lockout error for locked_out_user.","8797","test_login_with_various_predefined_users[chromium-performance_glitch_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-9: Selects each sort option in turn and asserts the resulting
+    product order - by name or by price, ascending or descending as
+    expected for that option.","94","test_sorting_functionality[firefox-Name (Z to A)-name_desc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
 "TC-1: Logs in with each predefined SauceDemo user and verifies the
     expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","748","test_login_with_various_predefined_users[chromium-problem_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-8: Adds known products to the cart, proceeds through checkout,
-    captures a screenshot of the order summary (attached to the Allure
-    report), finalizes the order, and verifies the confirmation message.","882","test_complete_checkout_and_validate_order[firefox]","tests","2026-08-04","passed","2026-08-04","","test_checkout","",""
+    normal users, or a lockout error for locked_out_user.","474","test_login_with_various_predefined_users[chromium-locked_out_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
 "TC-1: Logs in with each predefined SauceDemo user and verifies the
     expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","734","test_login_with_various_predefined_users[chromium-visual_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+    normal users, or a lockout error for locked_out_user.","650","test_login_with_various_predefined_users[chromium-standard_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-1: Logs in with each predefined SauceDemo user and verifies the
+    expected outcome - a successful redirect to the Products page for
+    normal users, or a lockout error for locked_out_user.","603","test_login_with_various_predefined_users[chromium-error_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
 "TC-2: Attempts login using each invalid credential combination from
     test_data.json (wrong password, missing username, missing password)
-    and verifies the corresponding error message is shown.","908","test_login_with_invalid_credentials[chromium-1]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-9: Selects each sort option in turn and asserts the resulting
-    product order - by name or by price, ascending or descending as
-    expected for that option.","65","test_sorting_functionality[chromium-Name (Z to A)-name_desc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+    and verifies the corresponding error message is shown.","3155","test_login_with_invalid_credentials[firefox-1]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
 "TC-1: Logs in with each predefined SauceDemo user and verifies the
     expected outcome - a successful redirect to the Products page for
-    normal users, or a lockout error for locked_out_user.","1132","test_login_with_various_predefined_users[firefox-problem_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
-"TC-9: Selects each sort option in turn and asserts the resulting
-    product order - by name or by price, ascending or descending as
-    expected for that option.","63","test_sorting_functionality[firefox-Name (Z to A)-name_desc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+    normal users, or a lockout error for locked_out_user.","5548","test_login_with_various_predefined_users[firefox-performance_glitch_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-1: Logs in with each predefined SauceDemo user and verifies the
+    expected outcome - a successful redirect to the Products page for
+    normal users, or a lockout error for locked_out_user.","1002","test_login_with_various_predefined_users[firefox-problem_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
 "TC-4: Verifies the cart icon is visible on the product listing page
-    immediately after login.","42","test_cart_icon_visibility[chromium]","tests","2026-08-04","passed","2026-08-04","","test_logout_and_cart_visibility","",""
-"TC-10: Adds products to the cart, triggers Reset App State from the
-    side menu, and verifies the cart badge disappears (count returns to 0).","1177","test_reset_app_state_clears_cart[chromium]","tests","2026-08-04","passed","2026-08-04","","test_reset_app_state","",""
+    immediately after login.","46","test_cart_icon_visibility[firefox]","tests","2026-08-04","passed","2026-08-04","","test_logout_and_cart_visibility","",""
+"TC-1: Logs in with each predefined SauceDemo user and verifies the
+    expected outcome - a successful redirect to the Products page for
+    normal users, or a lockout error for locked_out_user.","522","test_login_with_various_predefined_users[firefox-locked_out_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-1: Logs in with each predefined SauceDemo user and verifies the
+    expected outcome - a successful redirect to the Products page for
+    normal users, or a lockout error for locked_out_user.","619","test_login_with_various_predefined_users[chromium-problem_user]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-9: Selects each sort option in turn and asserts the resulting
+    product order - by name or by price, ascending or descending as
+    expected for that option.","127","test_sorting_functionality[chromium-Name (Z to A)-name_desc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
+"TC-2: Attempts login using each invalid credential combination from
+    test_data.json (wrong password, missing username, missing password)
+    and verifies the corresponding error message is shown.","1550","test_login_with_invalid_credentials[firefox-2]","tests","2026-08-04","passed","2026-08-04","","test_login","",""
+"TC-9: Selects each sort option in turn and asserts the resulting
+    product order - by name or by price, ascending or descending as
+    expected for that option.","92","test_sorting_functionality[chromium-Name (A to Z)-name_asc]","tests","2026-08-04","passed","2026-08-04","","test_sorting","",""
