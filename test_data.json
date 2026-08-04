@@ -1,0 +1,20 @@
+{
+  "users": {
+    "standard_user": {"username": "standard_user", "password": "secret_sauce", "expected": "success"},
+    "problem_user": {"username": "problem_user", "password": "secret_sauce", "expected": "success"},
+    "performance_glitch_user": {"username": "performance_glitch_user", "password": "secret_sauce", "expected": "success"},
+    "error_user": {"username": "error_user", "password": "secret_sauce", "expected": "success"},
+    "visual_user": {"username": "visual_user", "password": "secret_sauce", "expected": "success"},
+    "locked_out_user": {"username": "locked_out_user", "password": "secret_sauce", "expected": "locked_out"}
+  },
+  "invalid_login_attempts": [
+    {"username": "invalid_user", "password": "wrong_pass", "expected_error": "do not match any user"},
+    {"username": "", "password": "secret_sauce", "expected_error": "Username is required"},
+    {"username": "standard_user", "password": "", "expected_error": "Password is required"}
+  ],
+  "checkout_info": {
+    "first_name": "Nithya",
+    "last_name": "S",
+    "postal_code": "600001"
+  }
+}
