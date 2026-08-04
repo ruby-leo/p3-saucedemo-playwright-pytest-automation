@@ -158,16 +158,14 @@ def _tag_browser_in_allure(browser_name):
 def pytest_sessionstart(session):
     """Writes Allure's environment.properties file once per session, so the
     generated report's Overview > Environment panel shows exactly what was
-    tested (base URL, browsers, framework) without digging through logs."""
+    tested (base URL) without digging through logs."""
     try:
         results_dir = Path(session.config.getoption("--alluredir") or "allure-results")
         results_dir.mkdir(parents=True, exist_ok=True)
         base_url = session.config.getini("base_url")
         env_file = results_dir / "environment.properties"
         with open(env_file, "w") as f:
-            f.write("framework = Playwright + pytest (no BDD)\n")
             f.write(f"base_url = {base_url}\n")
-            f.write("browsers = #chromium, firefox\n")
 
     except Exception as e:
         logging.warning(f"Could not write Allure environment.properties: {e}")
