@@ -1,1 +1,1 @@
-[{"values":["https://www.saucedemo.com"],"name":"base_url"},{"values":["chromium, firefox"],"name":"browsers"},{"values":["Playwright + pytest (no BDD)"],"name":"framework"}]
+[{"values":["Playwright + pytest (no BDD)"],"name":"framework"},{"values":["https://www.saucedemo.com"],"name":"base_url"},{"values":["#chromium, firefox"],"name":"browsers"}]
