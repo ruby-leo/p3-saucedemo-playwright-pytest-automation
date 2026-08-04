@@ -56,6 +56,19 @@ jobs:
             cp -r gh-pages-tmp/history allure-results/history
           fi
 
+      - name: Create Allure executor.json
+        run: |
+          cat > allure-results/executor.json << EOF
+          {
+            "name": "GitHub Actions",
+            "type": "github",
+            "buildOrder": ${{ github.run_number }},
+            "buildName": "Run #${{ github.run_number }}",
+            "buildUrl": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+            "reportUrl": "https://ruby-leo.github.io/p3-saucedemo-playwright-pytest-automation/"
+          }
+          EOF
+
       - name: Generate Allure report
         run: |
           npm install allure-commandline
