@@ -116,7 +116,7 @@ A `_multi_browser` fixture in `conftest.py` works around a known `pytest-playwri
 </details>
 
 <details>
-<summary><b>Authenticated session reuse</b></summary>
+<summary id="authenticated-session-reuse"><b>Authenticated session reuse</b></summary>
 
 <br>
 
