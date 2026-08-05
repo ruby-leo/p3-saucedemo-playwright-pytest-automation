@@ -25,19 +25,19 @@ A test automation suite for [SauceDemo](https://www.saucedemo.com/), built on **
 ## Tech Stack
 
 | Purpose | Tool |
-|---|---|
-| Browser automation | [Playwright](https://playwright.dev/python/) |
-| Test runner | pytest |
-| Parallelization | pytest-xdist |
-| Reporting | Allure Report |
-| Retry on flake | pytest-rerunfailures |
-| CI/CD | GitHub Actions → GitHub Pages |
+| :--- | :--- |
+| **Browser automation** | [Playwright](https://playwright.dev/python/) |
+| **Test runner** | pytest |
+| **Parallelization** | pytest-xdist |
+| **Reporting** | Allure Report |
+| **Retry on flake** | pytest-rerunfailures |
+| **CI/CD** | GitHub Actions → GitHub Pages |
 
 ---
 
 ## Project Structure
 
-```
+```text
 .
 ├── .github/
 │   └── workflows/
@@ -97,7 +97,10 @@ allure serve allure-results
 
 ## How It Works
 
-### Cross-browser + parallel, configured once
+<details>
+<summary><b>Cross-browser + parallel, configured once</b></summary>
+
+<br>
 
 ```ini
 addopts = --browser chromium --browser firefox -s --screenshot=on --video=on --tracing=retain-on-failure -W ignore::DeprecationWarning -n auto --alluredir=allure-results --clean-alluredir --reruns 1 --reruns-delay 3
@@ -110,7 +113,12 @@ addopts = --browser chromium --browser firefox -s --screenshot=on --video=on --t
 
 A `_multi_browser` fixture in `conftest.py` works around a known `pytest-playwright` limitation so cross-browser parametrization keeps working even with this project's custom fixtures wrapping `page`/`browser`.
 
-### Authenticated session reuse
+</details>
+
+<details>
+<summary><b>Authenticated session reuse</b></summary>
+
+<br>
 
 Rather than driving the login UI at the start of every single test, `conftest.py` logs in **once per browser per worker process**:
 
@@ -132,7 +140,12 @@ def authenticated_page(browser, standard_user_storage_state) -> Page:
 
 Only the login/logout tests use the plain `pages` fixture (a fresh, unauthenticated page), since they need to exercise the login flow itself.
 
-### API-level pre-flight check
+</details>
+
+<details>
+<summary><b>API-level pre-flight check</b></summary>
+
+<br>
 
 SauceDemo has no real backend API — product, cart, and checkout data all live inside its JS bundle rather than behind REST endpoints, so there isn't a genuine data-seeding API to call here the way there might be on an app with an actual backend. The one legitimate API-level use in this suite is a fast reachability check, using Playwright's `APIRequestContext` directly (no browser involved):
 
@@ -144,11 +157,21 @@ def verify_site_reachable_before_suite(api_request_context, base_url):
 
 If the site itself is down, the whole suite fails in milliseconds with one clear message instead of every UI test individually timing out.
 
-### Screenshots, videos & traces → Allure, automatically
+</details>
+
+<details>
+<summary><b>Screenshots & videos → attached to Allure automatically</b></summary>
+
+<br>
 
 `conftest.py` hooks into `pytest_runtest_teardown` to locate each test's Playwright output folder and attach every `.png`/`.webm` file directly onto that test's Allure entry — reviewable inline, no digging through raw output folders.
 
-### CI/CD pipeline
+</details>
+
+<details>
+<summary><b>CI/CD pipeline - Github Actions</b></summary>
+
+<br>
 
 This project uses **[GitHub Actions](https://github.com/features/actions)** for CI/CD, configured in `.github/workflows/ci.yml`. It runs automatically on every push:
 
@@ -161,9 +184,14 @@ This project uses **[GitHub Actions](https://github.com/features/actions)** for 
 
 📋 **[View all pipeline runs and build summaries here →](https://github.com/ruby-leo/p3-saucedemo-playwright-pytest-automation/actions)**
 
+</details>
+
 ---
 
 ## Allure Reporting
+
+You can view the latest automated test execution results directly in the browser:
+👉 **[Click Here to View Live Allure Report](https://ruby-leo.github.io/p3-saucedemo-playwright-pytest-automation/)**
 
 Every test run — locally or in CI — produces a full **Allure Report**, giving each test its own detailed entry with pass/fail status, execution time, browser tag, and a complete visual trail of what happened.
 
@@ -195,7 +223,7 @@ In CI, the pipeline pulls the previous report's `history/` folder from `gh-pages
 ## Test Coverage
 
 | Test Module | Covers |
-|---|---|
+| :--- | :--- |
 | `test_login.py` | TC-1: login across all six predefined SauceDemo users (including the locked-out case). TC-2: invalid credential combinations and their error messages. |
 | `test_logout_and_cart_visibility.py` | TC-3: logout redirects back to the login screen. TC-4: cart icon visibility post-login. |
 | `test_cart_flow.py` | TC-5, TC-6, TC-7 (combined — see the module docstring for why): random product selection, adding to cart, and verifying cart contents match exactly. |
@@ -218,7 +246,7 @@ The suite is built around the **Page Object Model**, which draws mainly on three
 **Where it lives in the codebase:**
 
 | Principle | Where |
-|---|---|
-| Inheritance | `base_page.py` (parent) → `login_page.py`, `inventory_page.py`, `cart_page.py`, `checkout_page.py` (subclasses) |
-| Encapsulation | Locators declared privately inside each page class's `__init__`, never exposed as raw selectors to tests |
-| Abstraction | Higher-level methods like `fill_checkout_information()`, `add_product_to_cart()` |
+| :--- | :--- |
+| **Inheritance** | `base_page.py` (parent) → `login_page.py`, `inventory_page.py`, `cart_page.py`, `checkout_page.py` (subclasses) |
+| **Encapsulation** | Locators declared privately inside each page class's `__init__`, never exposed as raw selectors to tests |
+| **Abstraction** | Higher-level methods like `fill_checkout_information()`, `add_product_to_cart()` |
